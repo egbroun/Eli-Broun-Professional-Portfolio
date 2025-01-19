@@ -6,10 +6,19 @@
     <title>About Me - Eli Broun GIS Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
         nav {
             background-color: #5f80a3;
             padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
+
         nav .menu {
             display: flex;
             justify-content: center;
@@ -17,16 +26,76 @@
             margin: 0;
             padding: 0;
         }
+
         nav .menu li {
             margin: 0 15px;
         }
+
         nav .menu a {
             color: white;
             text-decoration: none;
             font-size: 16px;
             font-weight: bold;
         }
+
         nav .menu a:hover {
+            text-decoration: underline;
+        }
+
+        #about-me {
+            padding: 20px;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .about-photo {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            float: left;
+        }
+
+        .about-content p {
+            flex: 1;
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        #details h2 {
+            padding-left: 20px;
+            margin-top: 40px;
+            font-size: 24px;
+        }
+
+        #details .detail-content {
+            padding-left: 20px;
+            font-size: 18px;
+        }
+
+        #details .detail-content span {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        footer {
+            background-color: #5f80a3;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
             text-decoration: underline;
         }
     </style>
@@ -46,41 +115,34 @@
     <section id="about-me">
         <h1>About Me</h1>
         <div class="about-content">
-            <img src="about/IMG_3183.jpg" alt="Photo of Eli Broun" class="about-photo">
-            <p>Hello! My name is Eli Broun. I am a senior at the University of North Carolina at Chapel Hill, majoring in Environmental Studies with a minor in Data Science. I have a passion for GIS, environmental sustainability, and using data analysis to craft community-focused solutions. My work spans research on historical preservation in Princeville, NC, and global energy transitions, showcasing my dedication to impactful, data-driven projects.</p>
+            <img src="IMG_3183.jpg" alt="Photo of Eli Broun" class="about-photo">
+            <p>Hello! My name is Eli Broun. I am a senior at the University of North Carolina at Chapel Hill, majoring in Environmental Studies with a minor in Data Science. I have a passion for GIS, environmental sustainability, and using data analysis to craft community-focused solutions. My work spans research on historical preservation in Princeville, NC, and global energy transitions, showcasing my dedication to impactful, data-driven projects. Additional text to fill space and demonstrate how the layout adapts to longer descriptions.</p>
         </div>
     </section>
 
     <!-- Additional Sections -->
     <section id="details">
         <h2>Research Interests</h2>
-        <ul>
-            <li>Environmental Sustainability</li>
-            <li>Historical Preservation</li>
-            <li>Spatial Analysis and Mapping</li>
-            <li>Community-Focused Climate Resiliency</li>
-        </ul>
+        <div class="detail-content">
+            <span>Environmental Sustainability</span>| <span>Historical Preservation</span>| <span>Spatial Analysis and Mapping</span>| <span>Community-Focused Climate Resiliency</span>
+        </div>
 
         <h2>Technical Skills</h2>
-        <ul>
-            <li>GIS (ArcGIS Pro, QGIS, Leaflet)</li>
-            <li>Programming (Python, R)</li>
-            <li>Data Visualization and Analysis</li>
-            <li>Drone Operations (FAA Part 107 Certified)</li>
-        </ul>
+        <div class="detail-content">
+            <span>GIS (ArcGIS Pro, QGIS, Leaflet)</span>| <span>Programming (Python, R)</span>| <span>Data Visualization and Analysis</span>| <span>Drone Operations (FAA Part 107 Certified)</span>
+        </div>
 
         <h2>Certifications</h2>
-        <ul>
-            <li>FAA Part 107 Drone Pilot Certification</li>
-            <li>GIS and Data Analysis Proficiency</li>
-        </ul>
+        <div class="detail-content">
+            <span>FAA Part 107 Drone Pilot Certification</span>| <span>GIS and Data Analysis Proficiency</span>
+        </div>
     </section>
 
     <!-- Contact Me Section -->
     <footer>
         <h3>Contact Me</h3>
-        <p>Email: <a href="mailto:elibrioun@example.com">elibrioun@example.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/eli-broun" target="_blank">linkedin.com/in/eli-broun</a></p>
+        <p>Email: <a href="mailto:elibroun23@gmail.com">elibroun23@gmail.com</a></p>
+        <p>LinkedIn: <a href="www.linkedin.com/in/eli-broun-1ab975251" target="www.linkedin.com/in/eli-broun-1ab975251">www.linkedin.com/in/eli-broun-1ab975251</a></p>
     </footer>
 </body>
 </html>
