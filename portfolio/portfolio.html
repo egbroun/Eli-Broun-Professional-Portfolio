@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Eli Broun GIS Portfolio</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            background-color: #5f80a3;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .menu {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            margin: 0;
+            padding: 10px 0;
+        }
+
+        nav .menu li {
+            margin: 0 15px;
+        }
+
+        nav .menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        nav .menu a:hover {
+            text-decoration: underline;
+        }
+
+        .portfolio {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .project {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .project img {
+            width: 100%;
+            height: auto;
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        .project-content h3 {
+            margin: 10px 0;
+            font-size: 20px;
+        }
+
+        .project-content p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        .project-content button {
+            background-color: #5f80a3;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .project-content button:hover {
+            background-color: #4a6582;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 800px;
+            position: relative;
+        }
+
+        .modal-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .modal-content h3 {
+            margin-top: 20px;
+        }
+
+        .modal-content p {
+            margin-top: 10px;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: black;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function openModal(index) {
+            document.getElementById(`modal-${index}`).style.display = 'flex';
+        }
+
+        function closeModal(index) {
+            document.getElementById(`modal-${index}`).style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <nav>
+        <ul class="menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about/about.html">About Me</a></li>
+            <li><a href="../resume/resume.html">Resume</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+        </ul>
+    </nav>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio">
+        <!-- Project 1 -->
+        <div class="project">
+            <img src="2.jpg" alt="Project 1">
+            <div class="project-content">
+                <h3>Project Title 1</h3>
+                <p>Brief description of Project 1.</p>
+                <button onclick="openModal(1)">Learn More</button>
+            </div>
+        </div>
+
+        <!-- Modal for Project 1 -->
+        <div class="modal" id="modal-1">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal(1)">&times;</span> 
+                <img src="2.jpg" alt="Project 1">
+                <h3>Expanded Title 2</h3>
+            </div>
+        </div>
+
+        <!-- Repeat for other projects -->
+        <div class="project">
+            <img src="3.jpg" alt="Project 2">
+            <div class="project-content">
+                <h3>Project Title 2</h3>
+                <p>Brief description of Project 2.</p>
+                <button onclick="openModal(2)">Learn More</button>
+            </div>
+        </div>
+
+        <div class="modal" id="modal-2">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal(2)">&times;</span>
+                <img src="3.jpg" alt="Project 2">
+                <h3>Expanded Title 2</h3>
+                <p>Detailed description of Project 2.</p>
+            </div>
+        </div>
+        <!-- Add other projects as needed -->
+        <div class="project">
+            <img src="4.jpg" alt="Project 4">
+            <div class="project-content">
+                <h3>Project Title 1</h3>
+                <p>Brief description of Project 1.</p>
+                <button onclick="openModal(4)">Learn More</button>
+            </div>
+        </div>
+
+    
+        <div class="modal" id="modal-4">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal(4)">&times;</span>
+                <img src="4.jpg" alt="Project 4">
+                <h3>Expanded Title 1</h3>
+                <p>Detailed description of Project 1.</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="5.jpg" alt="Project 5">
+            <div class="project-content">
+                <h3>Project Title 1</h3>
+                <p>Brief description of Project 1.</p>
+                <button onclick="openModal(5)">Learn More</button>
+            </div>
+        </div>
+
+        <div class="modal" id="modal-5">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal(5)">&times;</span>
+                <img src="5.jpg" alt="Project 5">
+                <h3>Expanded Title 1</h3>
+                <p>Detailed description of Project 1.</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="6.jpg" alt="Project 6">
+            <div class="project-content">
+                <h3>Project Title 1</h3>
+                <p>Brief description of Project 1.</p>
+                <button onclick="openModal(6)">Learn More</button>
+            </div>
+        </div>
+
+        <div class="modal" id="modal-6">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal(6)">&times;</span>
+                <img src="6.jpg" alt="Project 6">
+                <h3>Expanded Title 1</h3>
+                <p>Detailed description of Project 1.</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="7.jpg" alt="Project 7">
+            <div class="project-content">
+                <h3>Project Title 1</h3>
+                <p>Brief description of Project 1.</p>
+                <button onclick="openModal(7)">Learn More</button>
+            </div>
+        </div>
+
+        <div class="modal" id="modal-7">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal(7)">&times;</span>
+                <img src="7.jpg" alt="Project 7">
+                <h3>Expanded Title 1</h3>
+                <p>Detailed description of Project 1.</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="8.jpg" alt="Project 8">
+            <div class="project-content">
+                <h3>Project Title 1</h3>
+                <p>Brief description of Project 1.</p>
+                <button onclick="openModal(8)">Learn More</button>
+            </div>
+        </div>
+
+        <div class="modal" id="modal-8">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal(8)">&times;</span>
+                <img src="8.jpg" alt="Project 8">
+                <h3>Expanded Title 1</h3>
+                <p>Detailed description of Project 1.</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="9.jpg" alt="Project 9">
+            <div class="project-content">
+                <h3>Project Title 1</h3>
+                <p>Brief description of Project 1.</p>
+                <button onclick="openModal(9)">Learn More</button>
+            </div>
+        </div>
+
+        <!-- Modal for Project 1 -->
+        <div class="modal" id="modal-9">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal(9)">&times;</span>
+                <img src="9.jpg" alt="Project 9">
+                <h3>Expanded Title 1</h3>
+                <p>Detailed description of Project 1.</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="Picture1.png" alt="Project 10">
+            <div class="project-content">
+                <h3>Project Title 1</h3>
+                <p>Brief description of Project 1.</p>
+                <button onclick="openModal(10)">Learn More</button>
+            </div>
+        </div>
+
+        <!-- Modal for Project 1 -->
+        <div class="modal" id="modal-10">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal(10)">&times;</span>
+                <img src="Picture1.png" alt="Project 10">
+                <h3>Expanded Title 1</h3>
+                <p>Detailed description of Project 1.</p>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- Contact Footer -->
+    <footer>
+        <h3>Contact Me</h3>
+        <p>Email: <a href="mailto:elibrioun@example.com">elibrioun@example.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/eli-broun" target="_blank">linkedin.com/in/eli-broun</a></p>
+    </footer>
+</body>
+</html>
